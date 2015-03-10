@@ -34,6 +34,7 @@ We have simple JSON input:
 
 ```json
 {
+	"@jsonlt": 1,
 	"person": {
 		"firstName": "#firstName",
 		"lastName": "#lastName"
@@ -73,6 +74,9 @@ We have simple JSON input:
 ```
 
 ### Transformation syntax:
+	
+##### `@jsonlt`
+Version of JSONLT, if not specified - the latest	
 	
 ##### `#fieldName` 
 Return field from the input JSON object
