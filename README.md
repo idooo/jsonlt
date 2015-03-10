@@ -15,7 +15,7 @@ We have simple JSON input:
 		"postCode": 4000,
 		"street": "200 Adelaide"
 	},
-	"orders": [ 2342000, 2342001, 23400015]
+	"orders": [ 2342000, 2342001, 23400015],
 	"items": [
 		{
 			"type": "book",
