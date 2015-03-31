@@ -1,0 +1,20 @@
+{
+  "author": "Alex Shteinikov <alex.shteinikov@gmail.com> (http://www.shteinikov.com/)",
+  "name": "jsonlt",
+  "description": "JSON Lazy Templates",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/idooo/jsonlt.git"
+  },
+  "main": "./index",
+  "keywords": [
+
+  ],
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {}
+}
