@@ -32,7 +32,7 @@ var rules = {
     "ordersString": "#(string)orders",
     "CDs": "#items|type='CD'",
     "descriptions": "#items*description",
-    "address": "#address^,",
+    "address": "#address^",
     "addressNormal": "#address.street, #address.suburb #address.postCode",
     "totalOrders": "#orders.length"
 };

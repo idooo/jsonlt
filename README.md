@@ -67,7 +67,7 @@ We have simple JSON input:
 		}
 	],
 	"descriptions": ["Simple book...", "Simple music CD"],
-	"address": "Brisbane 4000 200 Adelaide",
+	"address": "Brisbane, 4000, 200 Adelaide",
 	"addressNormal": "200 Adelaide, Brisbane 4000",
 	"totalOrders": 3
 }
