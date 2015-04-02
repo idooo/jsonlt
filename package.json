@@ -1,20 +1,29 @@
 {
   "author": "Alex Shteinikov <alex.shteinikov@gmail.com> (http://www.shteinikov.com/)",
   "name": "jsonlt",
-  "description": "JSON Lazy Templates",
+  "description": "JSON Lazy Transformation",
   "version": "0.1.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/idooo/jsonlt.git"
   },
-  "main": "./index",
+  "main": "./lib/jsonlt",
   "keywords": [
-
+    "json",
+    "jsonlt",
+    "json lazy transformation"
   ],
   "engines": {
     "node": "*"
   },
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-nodeunit": "^0.4.1",
+    "grunt-contrib-uglify": "^0.8.1",
+    "load-grunt-tasks": "^3.1.0",
+    "time-grunt": "^1.1.0"
+  },
   "optionalDependencies": {}
 }
