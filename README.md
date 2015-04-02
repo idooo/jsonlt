@@ -1,9 +1,91 @@
 # JSONLT
 #### JSON Lazy Transformation
 
-Surprisingly I didn't find anything that can help me to solve the trivial problem - transform one simple JSON object to another without writing any code. So here we are...
+Surprisingly I didn't find anything that can help me to solve the trivial problem - transform one simple JSON object to another without writing any code. 
 
-#### Example
+For example we have this object...
+
+```json
+{
+	"firstName": "John",
+	"lastName": "Smith",
+	"address": {
+		"suburb": "Brisbane",
+		"street": "200 Adelaide street"
+	}
+}
+```
+... that we can transform to ...
+
+```json
+{
+	"name": "John Smith",
+	"address": "Brisbane,200 Adelaide street"
+}
+```
+... using rule object:
+
+```json
+{
+	"name": "#firstName #lastName",
+	"address": "#address^"
+}
+```
+
+### Install
+Using npm...
+
+```
+npm install jsonlt --save
+```
+... or bower 
+
+```
+bower install --save
+```
+
+### Usage
+
+```js
+var JSONLT = require('jsonlt');
+var foo = new JSONLT();
+
+foo.transform(sourceObject, rulesObject);
+```
+
+You can pass options object to constructor `new JSONLT(options)`. JSONLT supports these options so far:
+
+##### `strict : boolean`
+JSONLT will abort transformation if there is an error and `strict` option set to `true`. Otherwise it will return an empty string for failed transformation. It set to `false` by default.
+
+
+### Transformation object syntax:
+	
+##### `@jsonlt`
+Version of JSONLT, if not specified - the latest	
+##### `#fieldName` 
+Return field from the input JSON object
+
+##### `#fieldName.propertyName`
+Return object.propertyName
+
+##### `#fieldName[index]`	
+Return value from array by index, -1 = last item 
+
+##### `#(type)fieldName`
+Cast to type
+
+##### `#fieldName|propertyName=value`
+Return array Array.filter by propertyName = value
+
+##### `#fieldName*propertyName`
+Return array of fieldName.propertyName elements
+
+##### `#fieldName^delimeter`
+Return string with object values divided by delimeters
+
+
+### More examples
 We have simple JSON input:
 
 ```json
@@ -72,34 +154,6 @@ We have simple JSON input:
 	"totalOrders": 3
 }
 ```
-
-### Transformation syntax:
-	
-##### `@jsonlt`
-Version of JSONLT, if not specified - the latest	
-	
-##### `#fieldName` 
-Return field from the input JSON object
-
-##### `#fieldName.propertyName`
-Return object.propertyName
-
-##### `#fieldName[index]`	
-Return value from array by index, -1 = last item 
-
-##### `#(type)fieldName`
-Cast to type
-
-##### `#fieldName|propertyName=value`
-Return array Array.filter by propertyName = value
-
-##### `#fieldName*propertyName`
-Return array of fieldName.propertyName elements
-
-##### `#fieldName^delimeter`
-Return string with object values divided by delimeters
-
-
 
 ## License
 

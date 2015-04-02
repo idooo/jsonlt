@@ -1,4 +1,5 @@
-var jsonlt = require('../lib/jsonlt');
+var JSONLT = require('../lib/jsonlt');
+var jsonlt = new JSONLT();
 
 var src = {
     "firstName": "John",

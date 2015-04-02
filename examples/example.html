@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script src="../lib/jsonlt.js"></script>
+
+    <style>
+        h1 {margin: 12px 0 0; font-size: 20px;}
+        textarea {font-family: monospace; width: 500px; font-size: 14px; height: 150px; display: block}
+        #transform {margin-top: 20px;}
+        .col {float:left; margin-right: 10px;}
+        .clear {clear: both;}
+    </style>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function() {
+
+            function setOutput(text) {
+                document.getElementById("output").innerText = text;
+            }
+
+            document.getElementById("transform").addEventListener("click", function() {
+                try {
+                    var src = JSON.parse(document.getElementById("src").value);
+                    var rules = JSON.parse(document.getElementById("rules").value);
+                }
+                catch (e) {
+                    return setOutput('JSON error: ' + e)
+                }
+                var jsonlt = new JSONLT();
+
+                var result = jsonlt.transform(src, rules);
+                setOutput(JSON.stringify(result, null, 2))
+            });
+
+        });
+
+    </script>
+
+</head>
+<body>
+
+    <div class="col">
+        <h1>Source</h1>
+
+<textarea id="src">{
+    "firstName": "John",
+    "lastName": "Smith",
+    "address": {
+        "suburb": "Brisbane",
+        "street": "200 Adelaide street"
+    }
+}
+</textarea>
+
+    </div>
+
+    <div class="col">
+        <h1>Rules</h1>
+
+<textarea id="rules">
+{
+    "name": "#firstName #lastName",
+    "address": "#address^"
+}
+</textarea>
+
+    </div>
+
+    <div class="clear"></div>
+
+    <button id="transform">Transform</button>
+
+    <h1>Output</h1>
+    <pre id="output"></pre>
+
+</body>
+</html>
