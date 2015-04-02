@@ -45,11 +45,14 @@ bower install --save
 ```
 
 ### Usage
+In io.js / Node.js project `var JSONLT = require('jsonlt');`
+
+Or in browser add `<script src="/path/to/jsonlt.min.js"></script>` and it will register global variable `JSONLT`
+
+And then:
 
 ```js
-var JSONLT = require('jsonlt');
 var foo = new JSONLT();
-
 foo.transform(sourceObject, rulesObject);
 ```
 
