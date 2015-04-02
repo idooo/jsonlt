@@ -41,7 +41,7 @@ npm install jsonlt --save
 Or you can use it in your client side application and then bower is a good choice:
 
 ```bash
-bower install --save
+bower install jsonlt --save
 ```
 
 ### Usage
