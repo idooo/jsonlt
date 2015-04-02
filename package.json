@@ -2,7 +2,7 @@
   "author": "Alex Shteinikov <alex.shteinikov@gmail.com> (http://www.shteinikov.com/)",
   "name": "jsonlt",
   "description": "JSON Lazy Transformation",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": {
     "type": "git",
     "url": "git://github.com/idooo/jsonlt.git"
