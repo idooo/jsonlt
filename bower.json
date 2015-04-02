@@ -1,0 +1,25 @@
+{
+  "name": "jsonlt",
+  "version": "0.1.0",
+  "description": "JSON Lazy Transformation",
+  "author": "alex.shteinikov@gmail.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/idooo/jsonlt.git"
+  },
+  "main": "dist/jsonlt.min.js",
+  "keywords": [
+    "json",
+    "jsonlt",
+    "json lazy transformation"
+  ],
+  "ignore" : [
+    "lib",
+    "tests",
+    "*.coffee",
+    "examples",
+    ".*",
+    "package.json"
+  ]
+}
