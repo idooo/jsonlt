@@ -35,12 +35,12 @@ For example we have this object...
 ### Install
 You can use JSONLT in your io.js / Node.js application and then you probably would like to install it using npm:
 
-```
+```bash
 npm install jsonlt --save
 ```
 Or you can use it in your client side application and then bower is a good choice:
 
-```
+```bash
 bower install --save
 ```
 
@@ -159,6 +159,18 @@ We have simple JSON input:
 	"totalOrders": 3
 }
 ```
+
+##Contributing
+
+####Install project dependencies
+```bash
+  npm install
+```
+
+####Grunt Tasks
+```grunt build``` Runs test and creates /dist folder including minified version
+
+```grunt test``` Runs unit tests
 
 ## License
 
