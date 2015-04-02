@@ -33,12 +33,12 @@ For example we have this object...
 ```
 
 ### Install
-Using npm...
+You can use JSONLT in your io.js / Node.js application and then you probably would like to install it using npm:
 
 ```
 npm install jsonlt --save
 ```
-... or bower 
+Or you can use it in your client side application and then bower is a good choice:
 
 ```
 bower install --save
@@ -87,6 +87,8 @@ Return array of fieldName.propertyName elements
 ##### `#fieldName^delimeter`
 Return string with object values divided by delimeters
 
+### Browsers support
+Normal browsers and IE9+
 
 ### More examples
 We have simple JSON input:
